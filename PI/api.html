@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login</title>
+        <style>
+            input[type="text"],input[type="email"],input[type="password"]{
+                font-family: MV Boli;
+                width:10px;
+                border:2px black;
+                border-radius: 24px;
+                color:yellow;
+            }
+            input[type="submit"]{
+                font-family: MV Boli;
+                width:10px;
+                border: 2px black;
+                border-radius: 24px;
+                color:black;
+                text-align: center;
+            }
+            input[type="submit"]:hover{
+                background-color: brown;
+            }
+        </style>
+    </head>
+    <form name="myform" method="POST" onsubmit="return validateform()">
+        enter name:<input type="text" id="name" placeholder="enter your name">
+        enter email:<input type="email" id="email" placeholder="enter your emai">
+        enter password:<input type="password" id="password" placeholder="password">
+        <input type="submit" onclick="validateform()" value="submit"/>
+        </form>
+        <body>
+            <script type="text/javascript">
+                var name=document.myform.name.value;
+                var email=document.myform.email.value;
+                var password=document.myform.password.value;
+
+                if (name =="" ){
+                    alert('name is required');
+                }
+                else if("name.length<5"){
+                    alert('name should be 5 characters in length');
+                }
+                else if(pwd=""){
+                    alert('password is required');
+                }
+                else if(email ==""){
+                    alert('email is required');
+                }
+                else{
+                    alert('submitted successfully')
+                }
+
+            </script>
+        </body>
+
+</html>

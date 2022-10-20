@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Poppins:ital,wght@0,300;1,300&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+body{
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right top, #070537, #003368, #006198, #0092c4, #12c6eb);
+}
+.container{
+    position: relative;
+    max-width: 430px;
+    width:100%;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+.container .forms{
+    padding:30px;
+}
+.container .forms title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.forms .input-feild{
+    margin-top: 30px;
+    position: relative;
+    height:50px;
+    width:100%;
+    
+
+}
+.input-feild input{
+    width:100%;
+    height: 100%;
+    padding:0 35px;
+    outline: none;
+    border:none;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+.input-feild i{
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+    font-size: 23px;
+}
+.input-feild i.icon{
+    left:0;
+}
+.input-feild i.showHidePw{
+    right:0;
+}
+.forms .checkbox-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+
+}
+.checkbox-content input{
+    margin:0 8px -2px 4px;
+    accent-color: #4070f4;
+}
+.forms .button{
+    margin-top:35px;
+}
+.forms .button input{
+    border:none;
+    color:white;
+    letter-spacing: 1px;
+    background-color: #4070f4;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 17px;
+    cursor: pointer;
+    transition:all 0.3s ease;
+}
+.button input:hover{
+    background-color: #265df2;
+}
+span{
+    font-size: 20px;
+}

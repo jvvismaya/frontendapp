@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #6C7A89;
+        }
+        .navbar .navbar-nav .nav-link:hover{
+            background-color: #A9A9A9;            
+        }
+        .open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+    </style> 
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg shadow-sm navbar-light bg-white fixed-top" >
+            <a class="navbar-brand" href="#">
+                <img src="qyrus.png" width="100px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                  <a class="nav-link text-body" href="server.html">Server</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link text-body" href="mobiles.html">Mobiles</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-body" href="accessories.html">Accessories</a>
+                </li>      
+              </ul>
+            </div>
+          </nav>
+          <br>
+          <br>
+
+          <button class="open-button" onclick="openForm()">Open Form</button>
+
+          <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    <script>
+        function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+    </script>
+
+    //actual part
+        <div class="container mt-5 p-3">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="text-center">Add Mobile</h4>
+                    </div>
+                    <div class="card-body">
+                <div class="form-group">
+                    <label for="">Current Client</label>
+                    <input type="text" class="form-control" placeholder="enter client" id="currentclient">
+                </div> 
+                <div class="form-group">
+                    <label for="">Date of Purchase</label>
+                    <input type="text" class="form-control" placeholder="date of purchase" id="dateofpurchase">
+                </div> 
+                <div class="form-group">
+                    <label for="">Enter location</label>
+                    <input type="text" class="form-control" placeholder="enter location" id="location">
+                </div>      
+                <div class="form-group">
+                    <label for="">Enter Manufacturer</label>
+                    <input type="text" class="form-control" placeholder="enter Manufacturer" id="manufacturer">
+                </div> 
+                <div class="form-group">
+                    <label for="">Enter Model</label>
+                    <input type="text" class="form-control" placeholder="enter Model" id="model">
+                </div>   
+                <div class="form-group">
+                    <label for="">Enter os</label>
+                    <input type="text" class="form-control" placeholder="enter os" id="os">
+                </div>        
+                <div class="form-group">
+                    <label for="">Enter SerielNumber</label>
+                    <input type="text" class="form-control" placeholder="enter serielnumber" id="serielnumber">
+                </div>  
+                <div class="form-group">
+                    <label for="">Enter status</label>
+                    <input type="text" class="form-control" placeholder="enter status" id="status">
+                </div>   
+                <div class="form-group">
+                    <label for="">Enter Type Of Device</label>
+                    <input type="text" class="form-control" placeholder="enter Type Of Device" id="typeofdevice">
+                </div>  
+                <div class="mt-3">
+                    <button class="btn btn-primary float-right" onclick="submitForm()">submit</button>
+                </div>
+                
+                <div class="w-100">
+                    <span id="message" class="text-success">Data inserted</span>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+            <div class="col-md-8">
+                <table class="table table-bordered text-white text-center">
+                    <thead>
+                        <th>Device id</th>
+                        <th>CurrentClient</th>
+                        <th>DateofPurchase</th>
+                        <th>Location</th>
+                        <th>Manufacturer</th>
+                        <th>Model</th>
+                        <th>OS</th>
+                        <th>SerielNumber</th>
+                        <th>Status</th>
+                        <th>TypeofDevice</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                        
+                    </thead>
+                    <tbody id="tbData">
+
+                    </tbody>
+                </table>
+
+            </div>
+
+            </div>
+        </div>
+        <script>
+            
+            
+          function addUser(){
+            let payload = getFormData();
+            
+            payload['currentclient']=document.getElementById("currentclient").value;
+            payload['dateofpurchase']=document.getElementById("dateofpurchase").value;
+            payload['location']=document.getElementById("location").value;
+            payload['manufacturer']=document.getElementById("manufacturer").value;
+            payload['model']=document.getElementById("model").value;
+            payload['os']=document.getElementById("os").value;
+            payload['serielnumber']=document.getElementById("serielnumber").value;
+            payload['status']=document.getElementById("status").value;
+            payload['typeofdevice']=document.getElementById("typeofdevice").value;
+
+            fetch("http://localhost:8080/api/addaccessories",{
+                method:"POST",
+                mode:"cors",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:JSON.stringify(payload)
+            }).then((res)=>res.json()).then((response)=>{
+                setSuccessMessage(response.message)
+                document.getElementById("message").innerHTML = response.message
+                document.getElementById("currentclient").value = "";
+                document.getElementById("dateofpurchase").value="";
+                document.getElementById("location").value="";
+                document.getElementById("manufacturer").value="";
+                document.getElementById("model").value="";
+                document.getElementById("os").value="";
+                document.getElementById("serielnumber").value="";
+                document.getElementById("status").value="";
+                document.getElementById("typeofdevice").value="";
+//clearFormData();
+
+                getData();
+            })           
+          }          
+            function getData(){
+                fetch("http://localhost:8080/api/getaccessories").then(
+                    (res)=>res.json()
+                ).then((response)=>{
+                    var tmpData="";
+                    console.log(response);
+                    Array.from(response).forEach(element => {
+                        tmpData+="<tr>"
+                        tmpData+="<td>"+element.id+"</td>";
+                        tmpData+="<td>"+element.currentclient+"</td>";
+                        tmpData+="<td>"+element.dateofpurchase+"</td>";
+                        tmpData+="<td>"+element.location+"</td>";
+                        tmpData+="<td>"+element.manufacturer+"</td>";
+                        tmpData+="<td>"+element.model+"</td>";
+                        tmpData+="<td>"+element.os+"</td>";
+                        tmpData+="<td>"+element.serielnumber+"</td>";
+                        tmpData+="<td>"+element.status+"</td>";
+                        tmpData+="<td>"+element.typeofdevice+"</td>";
+                        
+                        tmpData+="<td><button class='btn btn-primary' onclick='editDataCall(`"+element._id+"`)'>Edit</button></td>";
+                        tmpData+="<td><button class='btn btn-danger' onclick='deleteData(`"+element._id+"`)'>Delete</button></td>";
+                       
+                        tmpData+="</tr>";
+
+                    });
+                    document.getElementById("tbData").innerHTML=tmpData;
+                })
+            }
+            getData();
+
+            
+        </script>
+    </body>
+</html>

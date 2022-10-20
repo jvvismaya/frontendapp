@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        <link rel="stylesheet" href="style2.css">
+    
+        <title>Login</title>
+    </head>
+    <body>
+        <!--<nav class="navbar navbar-expand-lg shadow-sm navbar-light bg-white fixed-top" >
+            <a class="navbar-brand" href="#">
+                <img src="qyrus.png" width="100px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              </nav>-->
+        <div class="container">
+            <div class="forms">
+                <div class="form-login">
+                    <span class="title"> Welcome back, <br>Login to your account</span>
+                    <form name="myform"  class="box" method="POST" onsubmit="return validateform()">
+                        <div class="input-feild">
+                        <input type="text" id="name" placeholder="Enter your email" required>
+                        <i class="uil uil-envelope icon"></i>
+                        </div>
+                        <div class="input-feild">
+                            <input type="password" id="pwd" placeholder="Enter your password" required>
+                            <i class="uil uil-lock icon"></i>
+                            </div>
+                           
+                            <div class="checkbox-text">
+                                <div class="checkbox-content">
+                                    <input type="checkbox" id="logcheckbox">
+                                    <label for="logcheckbox" class="text">Remember me</label>
+                                </div>   
+                            </div>
+                            <div class="input-feild button">
+                                <!--<a href="adminpage.html">-->
+                                <input type="button" value="submit" onclick="validateform();"></input>  
+                                <!--</a> -->
+                                </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+        function validateform(){
+ var userRef = "john@quinnox.com";
+  var passRef = "masterchef";
+
+  var userRe = "vismaya@quinnox.com";
+  var passRe = "masterchef1";
+  
+  var user =  document.getElementById("name").value;
+  var pass = document.getElementById("pwd").value;
+  if (user == userRef && pass == passRef) {
+    window.location.replace("developer.html");
+  
+  }
+  else if (user == userRe && pass == passRe) {
+    window.location.replace("developer.html");
+ 
+  } else if(user ==''){
+    window.location.replace("registerdeveloper.html");
+    
+  }
+  else if(pass ==''){
+    window.location.replace("registerdeveloper.html");
+  }
+ 
+};
+
+ 
+        </script>
+    </body>
+</html>
